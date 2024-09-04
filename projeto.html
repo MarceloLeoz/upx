@@ -22,12 +22,30 @@
                 font-style:oblique;
              }
 
-             .topnav {
-                overflow: hidden;
-                background-color: #000000;
+             .topbar {
+                display: flex; /* Exibe os itens em linha */
+                align-items: center; /* Alinha verticalmente ao centro */
+                padding: 10px 20px; /* Espaçamento interno */
+                color: rgb(0,206,209); /* Cor do texto */
              }
-               
-             .topnav a {
+             .topbar .title {
+                margin: 0; /* Remove margens padrão */
+                font-size: 60px; /* Tamanho da fonte */
+                flex-grow: 2; /* Ocupa o espaço restante à direita */
+             }
+
+             .topbar nav {
+               display: flex;
+               justify-content: center; /* Centraliza os links no espaço restante */
+               flex-grow: 2; /* Ocupa o espaço restante à direita */
+             }
+
+             .topbar nav a {
+                text-decoration: none; /* Remove sublinhado */
+                margin: 0 15px; /* Espaçamento entre os links */
+             }
+
+             .topbar a {
                 float: left;
                 color: rgb(0,206,209);
                 text-align: center;
@@ -47,7 +65,7 @@
                 font-family:serif
              }
              .title{
-               text-align-last: center;
+               text-align-last:left;
                 color:rgb(0,206,209);
                 font-size: 60px;
                 font-family:titulo
@@ -67,31 +85,36 @@
              }
 
              a:hover{
-                color: rgb(232,241,242);
+                color: rgb(255, 255, 255);
                 background-color: transparent;
                 text-decoration: underline; 
+                text-decoration: none;
              }
 
              a:active{
                 color: rgb(0,206,209);
                 background-color: transparent;
+                text-decoration: none;
                 text-decoration: underline; 
              }
       </style>
     </head> 
-    <body> 
-         <div class="topnav">
-            <a href="projeto.html">Home</a>
-            <a href="pagina2.html">page 2</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-         </div>
-        <h1 class="title">TITULO</h1>
-        <h3 class="text">  pagina 1 </h3>
-        <h2 class="sub_title"> subtitulo </h2>
-        <h3 class="text"> qualquer texto</h3>
-        <h2 class="sub_title">subtitulo</h2>
-        <h3 class="text"> qualquer texto</h3>
-     </body>
+    <body>
+      <header class="topbar">
+          <h1 class="title">TITULO</h1>
+          <nav>
+              <a href="projeto.html">Home</a>
+              <a href="pagina2.html">page 2</a>
+              <a href="#contact">Contact</a>
+              <a href="#about">About</a>
+          </nav>
+      </header>
+  
+      <h3 class="text">pagina 1</h3>
+      <h2 class="sub_title">subtitulo</h2>
+      <h3 class="text">qualquer texto</h3>
+      <h2 class="sub_title">subtitulo</h2>
+      <h3 class="text">qualquer texto</h3>
+  </body>
 </html>
 

@@ -5,14 +5,14 @@
         <link rel="shortcut icon" type="imagex/png" href="apple-touch-icon.ico">
         <style>
              @font-face {
-               font-family:titulo;
-               src: url(letras/collegiateflf/CollegiateOutlineFLF.ttf);
+                font-family:titulo;
+                src: url(letras/collegiateflf/CollegiateOutlineFLF.ttf);
              }
             
-            @font-face {
-               font-family:subtitulo;
-               src: url(letras/signatra/Signatra.ttf);
-            }
+             @font-face {
+                font-family:subtitulo;
+                src: url(letras/signatra/Signatra.ttf);
+             }
 
              body {background-color:rgb(0, 0, 0) }
          
@@ -22,19 +22,37 @@
                 font-style:oblique;
              }
 
-             .topnav {
-                  overflow: hidden;
-                  background-color: #000000;
-               }
-               
-             .topnav a {
-                  float: left;
-                  color: rgb(0,206,209);
-                  text-align: center;
-                  padding: 14px 16px;
-                  text-decoration: none;
-                  font-size: 17px;
-               }
+             .topbar {
+                display: flex; /* Exibe os itens em linha */
+                align-items: center; /* Alinha verticalmente ao centro */
+                padding: 10px 20px; /* Espaçamento interno */
+                color: rgb(0,206,209); /* Cor do texto */
+             }
+             .topbar .title {
+                margin: 0; /* Remove margens padrão */
+                font-size: 60px; /* Tamanho da fonte */
+                flex-grow: 2; /* Ocupa o espaço restante à direita */
+             }
+
+             .topbar nav {
+               display: flex;
+               justify-content: center; /* Centraliza os links no espaço restante */
+               flex-grow: 2; /* Ocupa o espaço restante à direita */
+             }
+
+             .topbar nav a {
+                text-decoration: none; /* Remove sublinhado */
+                margin: 0 15px; /* Espaçamento entre os links */
+             }
+
+             .topbar a {
+                float: left;
+                color: rgb(0,206,209);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+             }
 
              .image {
                 width: 250px;
@@ -47,12 +65,12 @@
                 font-family:serif
              }
              .title{
-               text-align-last: center;
+               text-align-last:left;
                 color:rgb(0,206,209);
                 font-size: 60px;
                 font-family:titulo
-
              }
+             
              .sub_title{
                 color: rgb(0, 139, 139);
                 font-size: 40px;
@@ -67,31 +85,36 @@
              }
 
              a:hover{
-                color: rgb(232,241,242);
+                color: rgb(255, 255, 255);
                 background-color: transparent;
                 text-decoration: underline; 
+                text-decoration: none;
              }
 
              a:active{
                 color: rgb(0,206,209);
                 background-color: transparent;
+                text-decoration: none;
                 text-decoration: underline; 
              }
       </style>
     </head> 
-    <body> 
-         <div class="topnav">
-            <a href="projeto.html">Home</a>
-            <a href="pagina2.html">page 2</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-         </div>
-        <h1 class="title">TITULO</h1>
-        <h3 class="text">  pagina 2 </h3>
-        <h2 class="sub_title"> subtitulo </h2>
-        <h3 class="text"> qualquer texto</h3>
-        <h2 class="sub_title">subtitulo</h2>
-        <h3 class="text"> qualquer texto</h3>
-     </body>
+    <body>
+      <header class="topbar">
+          <h1 class="title">TITULO</h1>
+          <nav>
+              <a href="projeto.html">Home</a>
+              <a href="pagina2.html">page 2</a>
+              <a href="#contact">Contact</a>
+              <a href="#about">About</a>
+          </nav>
+      </header>
+  
+      <h3 class="text">pagina 2</h3>
+      <h2 class="sub_title">subtitulo</h2>
+      <h3 class="text">qualquer texto</h3>
+      <h2 class="sub_title">subtitulo</h2>
+      <h3 class="text">qualquer texto</h3>
+  </body>
 </html>
 

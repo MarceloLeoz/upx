@@ -1,0 +1,92 @@
+@font-face {
+    font-family:titulo;
+    src: url(letras/collegiateflf/CollegiateOutlineFLF.ttf);
+ }
+
+ @font-face {
+    font-family:subtitulo;
+    src: url(letras/signatra/Signatra.ttf);
+ }
+
+ p { 
+    color: rgb(215, 25, 164);
+    font-size: medium;
+    font-style:oblique;
+ }
+
+ .topbar {
+    display: flex; /* Exibe os itens em linha */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 10px 20px; /* Espaçamento interno */
+    color: rgb(0,206,209); /* Cor do texto */
+ }
+ .topbar .title {
+    margin: 0; /* Remove margens padrão */
+    font-size: 60px; /* Tamanho da fonte */
+    flex-grow: 2; /* Ocupa o espaço restante à direita */
+ }
+
+ .topbar nav {
+   display: flex;
+   justify-content: center; /* Centraliza os links no espaço restante */
+   flex-grow: 2; /* Ocupa o espaço restante à direita */
+ }
+
+ .topbar nav a {
+    text-decoration: none; /* Remove sublinhado */
+    margin: 0 15px; /* Espaçamento entre os links */
+ }
+
+ .topbar a {
+    float: left;
+    color: rgb(0,206,209);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+ }
+
+ .image {
+    width: 250px;
+    height: 200px;
+ } 
+
+ .text{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family:serif
+ }
+
+ .title{
+   text-align-last:left;
+    color:rgb(0,206,209);
+    font-size: 60px;
+    font-family:titulo
+ }
+ 
+ .sub_title{
+    color: rgb(0, 139, 139);
+    font-size: 40px;
+    font-family:subtitulo
+ }
+
+ a:visited{
+    color: rgb(0,206,209);;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: medium;
+ }
+
+ a:hover{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: underline; 
+    text-decoration: none;
+ }
+
+ a:active{
+    color: rgb(0,206,209);
+    background-color: transparent;
+    text-decoration: none;
+    text-decoration: underline; 
+ }

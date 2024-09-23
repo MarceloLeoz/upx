@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
     font-family:titulo;
     src: url(letras/collegiateflf/CollegiateOutlineFLF.ttf);
  }
@@ -7,6 +7,22 @@
     font-family:subtitulo;
     src: url(letras/signatra/Signatra.ttf);
  }
+
+ img{
+    width: 120px;
+    height: 120px;
+ }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+ .circle {
+    border-radius: 50%;
+}
 
  p { 
     color: rgb(215, 25, 164);

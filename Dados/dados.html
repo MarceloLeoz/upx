@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/dados.css">
+        <title>Dados</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="texto">
+            <h1 class="work-sans">Bem-vindo ao sistema de monitoramento do chuveiro!</h1>
+            <br>
+            <p class="nanum-gothic-regular">Os dados do uso do chuveiro serão exibidos nesta página quando recebidos do ESP32.</p>
+            <br>
+        </div>
+
+        <script>
+            async function receberDados() 
+            {
+                try {
+                    const response = await fetch('http://endereco-ip-do-esp32/dados');
+                    const data = await response.json();
+                    console.log("Dados recebidos: ", data);
+
+                    document.getElementById("sensor1").innerText = data.sensor1;
+                    document.getElementById("sensor2").innerText = data.sensor2;
+                } catch (error) {
+                    console.error("Erro ao receber dados!", error);
+                }
+            }
+        </script>
+
+        <body onload="receberDados()">
+        <div class="texto2">
+            <h1 class="work-sans">Dados dos Sensores</h1>
+            <p class="nanum-gothic-regular">Sensor 1: <span id="sensor1">--</span></p><br>
+            <p class="nanum-gothic-regular">Sensor 2: <span id="sensor2">--</span></p>
+    </body>
+</html>

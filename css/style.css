@@ -8,13 +8,6 @@
     src: url(letras/signatra/Signatra.ttf);
  }
 
-
- p { 
-    color: rgb(215, 25, 164);
-    font-size: medium;
-    font-style:oblique;
- }
-
  .topbar {
     display: flex; /* Exibe os itens em linha */
     align-items: center; /* Alinha verticalmente ao centro */

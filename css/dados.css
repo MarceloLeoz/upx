@@ -56,7 +56,7 @@ p {
      font-family:titulo
   }
 
-  .topbar {
+ .topbar {
     display: flex; /* Exibe os itens em linha */
     align-items: center; /* Alinha verticalmente ao centro */
     padding: 10px 20px; /* Espaçamento interno */
@@ -70,7 +70,7 @@ p {
 
  .topbar nav {
    display: flex;
-   justify-content: center; /* Centraliza os links no espaço restante */
+   justify-content: flex-end; /* Centraliza os links no espaço restante */
    flex-grow: 2; /* Ocupa o espaço restante à direita */
  }
 

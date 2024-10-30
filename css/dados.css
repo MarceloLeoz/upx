@@ -71,7 +71,7 @@ p {
  }
  .topbar .title {
     margin: 0; /* Remove margens padrão */
-    font-size: 60px; /* Tamanho da fonte */
+    font-size: 40px; /* Tamanho da fonte */
     flex-grow: 2; /* Ocupa o espaço restante à direita */
  }
 
